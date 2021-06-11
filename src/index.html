@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.list').click(function(){
+        const value=$(this).attr('data-filter');
+        if(value == 'all'){
+            $('.box').show('1000');
+        }
+        else{
+            $('.box').filter('.'+value).show('1000');
+            $('.box').not('.'+value).hide('1000');
+        }
+    });
+    $('.list').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+})
+
+</script>
+<body>
+    <section>
+        <ul>
+            <li class="list active"data-filter="all">All </li>
+            <li class="list"data-filter="dog">Dog</li>
+            <li class="list"data-filter="cat">Cat</li>
+            <li class="list"data-filter="alien">Alien</li>
+            <li class="list"data-filter="bird">Bird</li>      
+        </ul>
+        <div class="animal">
+            <div class="box alien"><img src="../assets/al1.jpg" height="300px" width="300px"/></div>
+            <div class="box bird"><img src="../assets/br1.jpg" height="300px" width="300px"/></div>
+            <div class="box cat"><img src="../assets/ct1.jpg" height="300px" width="300px"/></div>
+            <div class="box dog"><img src="../assets/dg1.jpg" height="300px" width="300px"/></div>
+            <div class="box alien"><img src="../assets/al2.jpg" height="300px" width="300px"/></div>
+            <div class="box bird"><img src="../assets/br2.jpg" height="300px" width="300px"/></div>
+            <div class="box cat"><img src="../assets/ct2.jpg" height="300px" width="300px"/></div>
+            <div class="box dog"><img src="../assets/dg2.jpg" height="300px" width="300px"/></div>
+            <div class="box alien"><img src="../assets/al3.jpg" height="300px" width="300px"/></div>
+            <div class="box bird"><img src="../assets/br3.jpg" height="300px" width="300px"/></div>
+            <div class="box cat"><img src="../assets/ct3.jpg" height="300px" width="300px"/></div>
+            <div class="box dog"><img src="../assets/dg3.jpg" height="300px" width="300px"/></div>
+            <div class="box alien"><img src="../assets/al4.jpg" height="300px" width="300px"/></div>
+            <div class="box bird"><img src="../assets/br4.jpg" height="300px" width="300px"/></div>
+            <div class="box cat"><img src="../assets/ct4.jpg" height="300px" width="300px"/></div>
+            <div class="box dog"><img src="../assets/dg4.jpg" height="300px" width="300px"/></div>
+            <div class="box alien"><img src="../assets/al5.jpg" height="300px" width="300px"/></div>
+            <div class="box bird"><img src="../assets/br5.jpg" height="300px" width="300px"/></div>
+            <div class="box cat"><img src="../assets/ct5.jpg" height="300px" width="300px"/></div>
+            <div class="box dog"><img src="../assets/dg5.jpg" height="300px" width="300px"/></div>
+
+
+        </div>
+    </section>
+    
+</body>
+</html>
